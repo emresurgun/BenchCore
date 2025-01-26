@@ -3,6 +3,11 @@ import java.awt.*;
 
 public class MainPage extends JFrame {
 
+
+    JButton runButton;
+    JRadioButton singleCoreButton;
+    JRadioButton multiCoreButton;
+    JButton HowItsWorkButton;
     MainPage() {
 
         JPanel leftPanel = new JPanel();
@@ -11,15 +16,24 @@ public class MainPage extends JFrame {
         leftPanel.setLayout(null);
         this.add(leftPanel);
 
-        JButton runButton = new JButton("Run Benchmark");
+        runButton = new JButton("Run Benchmark");
         runButton.setBounds(25, 125, 200, 80);
         leftPanel.add(runButton);
 
-        JButton settingsButton = new JButton("Settings");
-        settingsButton.setBounds(25, 220, 200, 80);
-        leftPanel.add(settingsButton);
+        singleCoreButton = new JRadioButton("Single-Core Benchmark");
+        singleCoreButton.setBounds(25, 230, 250, 20);
+        leftPanel.add(singleCoreButton);
 
-        JButton HowItsWorkButton = new JButton("How Its Work ?");
+        multiCoreButton = new JRadioButton("Multi-Core Benchmark");
+        multiCoreButton.setBounds(25, 210, 250, 20);
+        leftPanel.add(multiCoreButton);
+        multiCoreButton.setSelected(true);
+
+        ButtonGroup group = new ButtonGroup();
+        group.add(singleCoreButton);
+        group.add(multiCoreButton);
+
+        HowItsWorkButton = new JButton("How Its Work ?");
         HowItsWorkButton.setBounds(25, 315, 200, 80);
         leftPanel.add(HowItsWorkButton);
 
