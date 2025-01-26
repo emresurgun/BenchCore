@@ -56,7 +56,6 @@ public class MainPage extends JFrame {
         this.setLayout(null); // Use absolute positioning
         this.setVisible(true);
     }
-
     public static void main(String[] args) {
         new MainPage();
     }
