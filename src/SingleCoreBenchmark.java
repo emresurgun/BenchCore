@@ -1,41 +1,30 @@
 public class SingleCoreBenchmark {
 
-    /**
-     * Calculates the single-core score by performing mathematical operations.
-     * This method runs the benchmark for 3 minutes and returns the score.
-     */
     public long calculateScore() {
-        long startTime = System.nanoTime();
-        long score = 0;
+        long startTime = System.nanoTime(); // Start timer in nanoseconds
+        long endTime = startTime + 60L * 1_000_000_000L; // 15 seconds in nanoseconds
+        long points = 0;
 
-        // Run operations for 3 minutes
-        long endTime = System.nanoTime() + 3 * 60 * 1_000_000_000L;
         while (System.nanoTime() < endTime) {
-            // Perform 1000 square root calculations
+            // Perform 1000 logarithm, 1000 Fibonacci, and 1000 division operations
             for (int i = 1; i <= 1000; i++) {
-                Math.sqrt(i);
+                Math.log(i + 1);      // Logarithm operation
+                fibonacci(i % 30);    // Fibonacci calculation
+                double division = 1000.0 / i; // Division operation
             }
-
-            // Perform 1000 Fibonacci calculations
-            for (int i = 1; i <= 1000; i++) {
-                fibonacci(i % 30); // Limit Fibonacci index to prevent overflow
-            }
-
-            // Perform 1000 division operations
-            for (int i = 1; i <= 1000; i++) {
-                double result = (double) i / (i + 1);
-            }
-
-            // Increment score for each full cycle of operations
-            score++;
+            points++; // Count this set of 3000 operations as 1 point
         }
 
+        long elapsedTime = System.nanoTime() - startTime; // Actual elapsed time
+        System.out.println("Single-Core Elapsed Time: " + elapsedTime + "ns");
+
+        // Normalize the points to the elapsed time
+        long score = (points * 1_000_000_000L) / elapsedTime;
+        System.out.println("Single-Core Final Score: " + score);
         return score;
     }
 
-    /**
-     * Calculates the Fibonacci number for a given index.
-     */
+    // Efficient Fibonacci calculation
     private long fibonacci(int n) {
         if (n <= 1) return n;
         long a = 0, b = 1;

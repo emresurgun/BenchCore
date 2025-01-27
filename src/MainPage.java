@@ -1,10 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class MainPage extends JFrame {
 
     JButton runButton;
-    JButton howItsWorkButton;
     JLabel singleCoreScoreLabel;
     JLabel multiCoreScoreLabel;
 
@@ -21,11 +22,7 @@ public class MainPage extends JFrame {
         runButton.setBounds(25, 125, 200, 80);
         leftPanel.add(runButton);
 
-        howItsWorkButton = new JButton("How Its Work?");
-        howItsWorkButton.setBounds(25, 315, 200, 80);
-        leftPanel.add(howItsWorkButton);
-
-        JLabel infoLabel = new JLabel("<html>CPU Benchmark<br>Version Alpha (1.0)<br>Emre Şurğun</html>");
+        JLabel infoLabel = new JLabel("<html>CPU Benchmark<br>Version Alpha (2.4)<br>Emre Şurğun</html>");
         infoLabel.setHorizontalAlignment(SwingConstants.CENTER);
         infoLabel.setBounds(50, 400, 150, 100);
         leftPanel.add(infoLabel);
@@ -43,7 +40,6 @@ public class MainPage extends JFrame {
         rightPanel.setLayout(null);
         this.add(rightPanel);
 
-        // Add score labels to the right panel
         JLabel scoreHeaderLabel = new JLabel("Benchmark Results");
         scoreHeaderLabel.setFont(new Font("Arial", Font.BOLD, 20));
         scoreHeaderLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -51,13 +47,13 @@ public class MainPage extends JFrame {
         rightPanel.add(scoreHeaderLabel);
 
         singleCoreScoreLabel = new JLabel("Single-Core Score: Pending...");
-        singleCoreScoreLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+        singleCoreScoreLabel.setFont(new Font("Arial", Font.BOLD, 16));
         singleCoreScoreLabel.setBounds(30, 80, 300, 30);
         rightPanel.add(singleCoreScoreLabel);
 
         multiCoreScoreLabel = new JLabel("Multi-Core Score: Pending...");
-        multiCoreScoreLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-        multiCoreScoreLabel.setBounds(30, 120, 300, 30);
+        multiCoreScoreLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        multiCoreScoreLabel.setBounds(500, 80, 300, 30);
         rightPanel.add(multiCoreScoreLabel);
 
         // Attach action listener to Run Benchmark button
@@ -74,22 +70,40 @@ public class MainPage extends JFrame {
     }
 
     /**
-     * Runs the single-core benchmark and updates the UI with the results.
+     * Runs the single-core and multi-core benchmarks sequentially
+     * and updates the UI with the results.
      */
     private void runBenchmark() {
         singleCoreScoreLabel.setText("Single-Core Score: Running...");
-        multiCoreScoreLabel.setText("Multi-Core Score: Calculating...");
+        multiCoreScoreLabel.setText("Multi-Core Score: Waiting...");
 
-        // Perform benchmarking in a separate thread
         new Thread(() -> {
+            // Run Single-Core Benchmark
             SingleCoreBenchmark singleCoreBenchmark = new SingleCoreBenchmark();
-            long singleCoreScore = singleCoreBenchmark.calculateScore();
-            SwingUtilities.invokeLater(() -> {
-                singleCoreScoreLabel.setText("Single-Core Score: " + singleCoreScore/1000);
-                // Placeholder for multi-core score (not implemented yet)
-                multiCoreScoreLabel.setText("Multi-Core Score: To Be Implemented");
-            });
+            long singleCoreScore = singleCoreBenchmark.calculateScore() / 100; // Divide by 100
+
+            SwingUtilities.invokeLater(() ->
+                    singleCoreScoreLabel.setText("Single-Core Score: " + formatScore(singleCoreScore))
+            );
+            multiCoreScoreLabel.setText("Multi-Core Score: Running...");
+            // Run Multi-Core Benchmark
+            MultiCoreBenchmark multiCoreBenchmark = new MultiCoreBenchmark();
+            long multiCoreScore = multiCoreBenchmark.calculateScore() / 100; // Divide by 100
+
+            SwingUtilities.invokeLater(() ->
+                    multiCoreScoreLabel.setText("Multi-Core Score: " + formatScore(multiCoreScore))
+            );
         }).start();
+    }
+
+    /**
+     * Formats the score with commas for better readability.
+     *
+     * @param score The score to format.
+     * @return The formatted score as a string.
+     */
+    private String formatScore(long score) {
+        return NumberFormat.getNumberInstance(Locale.US).format(score);
     }
 
     public static void main(String[] args) {
