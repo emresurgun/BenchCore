@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f35cd1fe-09f1-457d-aa5f-f8f6483c5b1f" name="Changes" comment="created the project">
-      <change afterPath="$PROJECT_DIR$/src/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f35cd1fe-09f1-457d-aa5f-f8f6483c5b1f" name="Changes" comment="change settings button to 2 radio buttons for single core benchmark and multi core benchmark option">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DatabaseHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreBench.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CoreBench.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MultiCoreBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiCoreBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SingleCoreBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleCoreBenchmark.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -37,25 +44,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "/Users/emresurgun/Desktop/CoreBench/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/emresurgun/Desktop/CoreBench/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,6 +74,12 @@
       <updated>1737657369680</updated>
       <workItem from="1737657370676" duration="1115000" />
       <workItem from="1737662124012" duration="4317000" />
+      <workItem from="1737832842172" duration="10400000" />
+      <workItem from="1737900396052" duration="3306000" />
+      <workItem from="1737923193828" duration="540000" />
+      <workItem from="1737931691689" duration="16499000" />
+      <workItem from="1738108559626" duration="10000" />
+      <workItem from="1738164800953" duration="8160000" />
     </task>
     <task id="LOCAL-00001" summary="created the project">
       <option name="closed" value="true" />
@@ -91,7 +105,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737657738978</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="designing the main page, trying diffirent designs">
+      <option name="closed" value="true" />
+      <created>1737832909471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737832909471</updated>
+    </task>
+    <task id="LOCAL-00005" summary="change settings button to 2 radio buttons for single core benchmark and multi core benchmark option">
+      <option name="closed" value="true" />
+      <created>1737900699213</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737900699213</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +130,9 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="created the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="created the project" />
+    <MESSAGE value="designing the main page, trying diffirent designs" />
+    <MESSAGE value="change settings button to 2 radio buttons for single core benchmark and multi core benchmark option" />
+    <option name="LAST_COMMIT_MESSAGE" value="change settings button to 2 radio buttons for single core benchmark and multi core benchmark option" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

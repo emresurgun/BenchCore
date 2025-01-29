@@ -14,7 +14,7 @@ public class MultiCoreBenchmark {
         System.out.println("Multi-Core Benchmark Running on " + numCores + " Cores");
 
         long startTime = System.nanoTime();
-        long endTime = startTime + 60L * 1_000_000_000L; // 15 seconds in nanoseconds
+        long endTime = startTime + 60L * 1_000_000_000L;
 
         // Submit tasks for each core
         for (int i = 0; i < numCores; i++) {

@@ -2,15 +2,15 @@ public class SingleCoreBenchmark {
 
     public long calculateScore() {
         long startTime = System.nanoTime(); // Start timer in nanoseconds
-        long endTime = startTime + 60L * 1_000_000_000L; // 15 seconds in nanoseconds
+        long endTime = startTime + 60L * 1_000_000_000L;
         long points = 0;
 
         while (System.nanoTime() < endTime) {
             // Perform 1000 logarithm, 1000 Fibonacci, and 1000 division operations
             for (int i = 1; i <= 1000; i++) {
-                Math.log(i + 1);      // Logarithm operation
-                fibonacci(i % 30);    // Fibonacci calculation
-                double division = 1000.0 / i; // Division operation
+                Math.log(i + 1);
+                fibonacci(i % 30);
+                double division = 1000.0 / i;
             }
             points++; // Count this set of 3000 operations as 1 point
         }
@@ -24,7 +24,6 @@ public class SingleCoreBenchmark {
         return score;
     }
 
-    // Efficient Fibonacci calculation
     private long fibonacci(int n) {
         if (n <= 1) return n;
         long a = 0, b = 1;
