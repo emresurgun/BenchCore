@@ -15,11 +15,9 @@ public class DatabaseHelper {
         loadConfig();
     }
 
-    // Konfigürasyon dosyasını resources klasöründen yükle
     private void loadConfig() {
         Properties properties = new Properties();
 
-        // config.properties dosyasını resources klasöründen yükle
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("config.properties")) {
             if (inputStream == null) {
                 System.err.println("Config dosyası bulunamadı");
