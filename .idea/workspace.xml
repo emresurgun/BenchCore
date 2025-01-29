@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f35cd1fe-09f1-457d-aa5f-f8f6483c5b1f" name="Changes" comment="change settings button to 2 radio buttons for single core benchmark and multi core benchmark option">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreBench.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CoreBench.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultiCoreBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiCoreBenchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleCoreBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleCoreBenchmark.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +71,7 @@
       <workItem from="1737923193828" duration="540000" />
       <workItem from="1737931691689" duration="16499000" />
       <workItem from="1738108559626" duration="10000" />
-      <workItem from="1738164800953" duration="8160000" />
+      <workItem from="1738164800953" duration="8482000" />
     </task>
     <task id="LOCAL-00001" summary="created the project">
       <option name="closed" value="true" />

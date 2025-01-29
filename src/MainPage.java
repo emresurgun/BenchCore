@@ -194,8 +194,4 @@ public class MainPage extends JFrame {
     private String formatScore(long score) {
         return String.format("%,d", score);
     }
-
-    public static void main(String[] args) {
-        new MainPage();
-    }
 }
