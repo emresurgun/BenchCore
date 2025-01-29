@@ -1,4 +1,4 @@
-import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -15,15 +15,22 @@ public class DatabaseHelper {
         loadConfig();
     }
 
+    // Konfigürasyon dosyasını resources klasöründen yükle
     private void loadConfig() {
         Properties properties = new Properties();
-        try (FileInputStream fis = new FileInputStream("config.properties")) {
-            properties.load(fis);
-            url = properties.getProperty("DB_URL");
-            user = properties.getProperty("DB_USER");
-            password = properties.getProperty("DB_PASSWORD");
+
+        // config.properties dosyasını resources klasöründen yükle
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+            if (inputStream == null) {
+                System.err.println("Config dosyası bulunamadı");
+            } else {
+                properties.load(inputStream);
+                url = properties.getProperty("DB_URL");
+                user = properties.getProperty("DB_USER");
+                password = properties.getProperty("DB_PASSWORD");
+            }
         } catch (IOException e) {
-            System.err.println("Error loading database configuration: " + e.getMessage());
+            System.err.println("Config dosyası okunamadı: " + e.getMessage());
         }
     }
 
