@@ -11,8 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f35cd1fe-09f1-457d-aa5f-f8f6483c5b1f" name="Changes" comment="change settings button to 2 radio buttons for single core benchmark and multi core benchmark option">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultiCoreBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiCoreBenchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleCoreBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleCoreBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreBench.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BenchCore.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,20 @@
         <env name="DB_PASSWORD" value="hyfqyx-tihxav-4naJvi" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="CoreBench" />
+      <module name="BenchCore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BenchCore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BenchCore" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,7 +111,7 @@
       <workItem from="1738187743957" duration="628000" />
       <workItem from="1738190257160" duration="2823000" />
       <workItem from="1738193269026" duration="683000" />
-      <workItem from="1738195367970" duration="406000" />
+      <workItem from="1738195367970" duration="1446000" />
     </task>
     <task id="LOCAL-00001" summary="created the project">
       <option name="closed" value="true" />

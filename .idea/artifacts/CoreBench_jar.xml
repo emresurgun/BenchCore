@@ -2,7 +2,7 @@
   <artifact type="jar" name="CoreBench:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/CoreBench_jar</output-path>
     <root id="archive" name="CoreBench.jar">
-      <element id="module-output" name="CoreBench" />
+      <element id="module-output" name="BenchCore" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../jar/mysql-connector-j-9.2.0.jar" path-in-jar="/" />
     </root>
   </artifact>
