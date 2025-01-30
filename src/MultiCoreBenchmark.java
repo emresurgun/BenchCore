@@ -11,7 +11,6 @@ public class MultiCoreBenchmark {
         ExecutorService executor = Executors.newFixedThreadPool(numCores);
         AtomicLong totalPoints = new AtomicLong(0);
 
-        System.out.println("Multi-Core Benchmark Running on " + numCores + " Cores");
 
         long startTime = System.nanoTime();
         long endTime = startTime + 60L * 1_000_000_000L;
@@ -30,7 +29,6 @@ public class MultiCoreBenchmark {
                     points++; // Count this set of 3000 operations as 1 point
                 }
                 totalPoints.addAndGet(points); // Add to the global total
-                System.out.println("Thread " + Thread.currentThread().getId() + " Points: " + points);
             });
         }
 
@@ -40,11 +38,9 @@ public class MultiCoreBenchmark {
         }
 
         long elapsedTime = System.nanoTime() - startTime; // Actual elapsed time
-        System.out.println("Multi-Core Elapsed Time: " + elapsedTime + "ns");
 
         // Normalize the points to the elapsed time
         long score = (totalPoints.get() * 1_000_000_000L) / elapsedTime;
-        System.out.println("Multi-Core Final Score: " + score);
         return score;
     }
 

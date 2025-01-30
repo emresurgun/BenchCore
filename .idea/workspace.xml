@@ -10,11 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f35cd1fe-09f1-457d-aa5f-f8f6483c5b1f" name="Changes" comment="change settings button to 2 radio buttons for single core benchmark and multi core benchmark option">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreBench.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CoreBench.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MultiCoreBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiCoreBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SingleCoreBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleCoreBenchmark.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +98,8 @@
       <workItem from="1738164800953" duration="8923000" />
       <workItem from="1738187743957" duration="628000" />
       <workItem from="1738190257160" duration="2823000" />
+      <workItem from="1738193269026" duration="683000" />
+      <workItem from="1738195367970" duration="406000" />
     </task>
     <task id="LOCAL-00001" summary="created the project">
       <option name="closed" value="true" />

@@ -16,11 +16,9 @@ public class SingleCoreBenchmark {
         }
 
         long elapsedTime = System.nanoTime() - startTime; // Actual elapsed time
-        System.out.println("Single-Core Elapsed Time: " + elapsedTime + "ns");
 
         // Normalize the points to the elapsed time
         long score = (points * 1_000_000_000L) / elapsedTime;
-        System.out.println("Single-Core Final Score: " + score);
         return score;
     }
 
