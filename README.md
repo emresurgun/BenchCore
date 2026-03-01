@@ -55,7 +55,4 @@
 <p><strong>Emre Şurğun</strong></p>
 
 ---
-
-<p align="center">💻 Happy Benchmarking! 🚀</p>
-
 <img width="1112" alt="Screenshot 2025-01-30 at 03 17 32" src="https://github.com/user-attachments/assets/6a5b1bb9-626e-4594-a80c-36b1d1c9b5d8" />
